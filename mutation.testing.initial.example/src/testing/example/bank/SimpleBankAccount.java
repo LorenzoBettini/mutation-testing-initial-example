@@ -7,7 +7,9 @@ package testing.example.bank;
  */
 public class SimpleBankAccount {
 
-	private double balance = 0;
+	// don't initialize to the Java default value
+	// to avoid false positives in mutation testing
+	private double balance;
 
 	public SimpleBankAccount() {
 
