@@ -28,4 +28,10 @@ public class SimpleBankAccountTest {
 		}
 	}
 
+	@Test
+	public void testDepositWhenAmountIsZeroIsOk() {
+		SimpleBankAccount bankAccount = new SimpleBankAccount(5);
+		bankAccount.deposit(0);
+		assertEquals(5, bankAccount.getBalance(), 0);
+	}
 }
