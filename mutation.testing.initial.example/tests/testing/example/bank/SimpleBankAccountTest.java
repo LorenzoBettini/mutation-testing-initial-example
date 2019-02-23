@@ -34,4 +34,9 @@ public class SimpleBankAccountTest {
 		bankAccount.deposit(0);
 		assertEquals(5, bankAccount.getBalance(), 0);
 	}
+
+	@Test
+	public void testInitialBalance() {
+		assertEquals(10, new SimpleBankAccount().getBalance(), 0);
+	}
 }
