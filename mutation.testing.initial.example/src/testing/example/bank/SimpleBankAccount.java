@@ -22,7 +22,7 @@ public class SimpleBankAccount {
 	}
 
 	public void deposit(double amount) {
-		if (amount <= 0) {
+		if (amount < 0) {
 			throw new IllegalArgumentException("Negative amount: " + amount);
 		}
 		balance += amount;
