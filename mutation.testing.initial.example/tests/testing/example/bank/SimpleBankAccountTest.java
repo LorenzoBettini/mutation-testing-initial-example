@@ -16,7 +16,7 @@ public class SimpleBankAccountTest {
 	@Test
 	public void testDepositWhenAmountIsNegativeShouldThrow() {
 		// setup
-		SimpleBankAccount bankAccount = new SimpleBankAccount();
+		SimpleBankAccount bankAccount = new SimpleBankAccount(0);
 		try {
 			// exercise
 			bankAccount.deposit(-1);

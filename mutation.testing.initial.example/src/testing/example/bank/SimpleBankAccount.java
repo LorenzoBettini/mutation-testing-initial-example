@@ -9,7 +9,7 @@ public class SimpleBankAccount {
 
 	// don't initialize to the Java default value
 	// to avoid false positives in mutation testing
-	private double balance;
+	private double balance = 10;
 
 	public SimpleBankAccount() {
 
