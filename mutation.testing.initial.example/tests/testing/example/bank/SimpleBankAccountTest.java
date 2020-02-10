@@ -39,4 +39,12 @@ public class SimpleBankAccountTest {
 	public void testInitialBalance() {
 		assertEquals(10, new SimpleBankAccount().getBalance(), 0);
 	}
+
+	@Test // Does it make sense just to kill a mutant?
+	public void testGetBalanceDoesNotChangeTheField() {
+		SimpleBankAccount bankAccount = new SimpleBankAccount();
+		assertEquals(10, bankAccount.getBalance(), 0);
+		// the field hasn't changed after calling the getter method
+		assertEquals(10, bankAccount.getBalance(), 0);
+	}
 }
